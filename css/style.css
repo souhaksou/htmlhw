@@ -56,39 +56,54 @@ a {
 .logo_2 {
   background-image: url(https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/footerLogo.png);
 }
-.nav ul {
+.nav > ul {
   display: flex;
   align-items: center;
 }
-.nav li {
-  padding: 16px;
-  margin-right: 4px;
-  border-bottom: 3px solid #fff;
-}
-.nav a {
+.cart a {
   color: #00cc99;
   font-weight: bold;
 }
-.nav li:hover {
+.cart ul {
+  display: none;
+  background: #fff;
+  display: none;
+  position: absolute;
+  left: 0px;
+  top: 51px;
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+}
+.cart li {
+  display: block;
+  padding: 16px;
+}
+.cart > li {
+  border-bottom: 3px solid #fff;
+  position: relative;
+}
+.cart > li:hover {
   border-bottom: 3px solid #00cc99;
+}
+.slidecart :hover {
+  background: yellow;
 }
 .banner {
   height: 346px;
   background-image: url(https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/banner.png);
-  background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-  align-items: center;
-}
-.banner .banner_text {
-  width: 100%;
   background-color: rgba(0, 0, 0, 0.3);
-  padding: 36px 22px;
 }
 .banner h2 {
+  width: 100%;
   color: #fff;
   font-size: 36px;
   line-height: 1.5;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 36px;
+  margin: auto;
 }
 .course {
   display: flex;
@@ -222,4 +237,20 @@ a {
 }
 .footer a:hover {
   color: brown;
+}
+.toTop {
+  display: block;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  font-size: 80px;
+  color: darkmagenta;
+}
+.toTop:hover {
+  color: magenta;
+}
+/* lightbox效果 */
+.lightboxOverlay {
+  background-color: pink;
+  opacity: 0.9;
 }
